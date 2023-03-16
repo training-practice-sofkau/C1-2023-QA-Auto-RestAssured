@@ -3,6 +3,7 @@ Feature: Login Usuario
   quiero enviar una peticion de logeo
   para poder loguearme en la plataforma
 
+  @logins
   Scenario: Login exitoso
     Given tengo credenciales para loguearme
     When envio las credenciales

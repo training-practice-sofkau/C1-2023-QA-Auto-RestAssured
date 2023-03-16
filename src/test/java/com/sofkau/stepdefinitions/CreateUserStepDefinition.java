@@ -6,12 +6,14 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.apache.log4j.Logger;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Assertions;
 
 public class CreateUserStepDefinition {
+    public static Logger LOGGER = Logger.getLogger(String.valueOf(CreateUserStepDefinition.class));
     private String requestBody;
     private Response response;
 
@@ -29,21 +31,23 @@ public class CreateUserStepDefinition {
 
     @When("la envio en una peticion")
     public void laEnvioEnUnaPeticion() {
+        RestAssured.baseURI = "https://reqres.in/";
         response = RestAssured.given().
                 contentType(ContentType.JSON).
                 body(requestBody).
-                post("https://reqres.in/api/users");
+                post("api/users");
     }
     @Then("debo obtener una respuesta positiva con los demas datos de creacion")
     public void deboObtenerUnaRespuestaPositivaConLosDemasDatosDeCreacion() {
         try {
             responseBody = (JSONObject) parser.parse(response.getBody().asString());
+            Assertions.assertEquals(response.getStatusCode(), 201);
+            Assertions.assertEquals("morpheus",responseBody.get("name"));
+            Assertions.assertEquals("leader",responseBody.get("job"));
         } catch (ParseException e) {
-            e.printStackTrace();
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
         }
-        response.then().statusCode(201);
-        Assertions.assertEquals("morpheus",responseBody.get("name"));
-        Assertions.assertEquals("leader",responseBody.get("job"));
     }
 
     //Scenario 2
