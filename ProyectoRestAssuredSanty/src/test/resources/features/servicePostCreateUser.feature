@@ -24,3 +24,5 @@ Feature: crear un nuevo usuario usando el servicio POST
         Given se encuentra en la seccion de registro de usuario y el campo de nombre esta vacio
         When  ingresa el dato del trabajo y deja el campo del nombre vacio
         Then  se debera ver un mensaje con un codigo HTTP not found
+
+

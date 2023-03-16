@@ -25,8 +25,8 @@ public class PeticionesRegressStepDefinition {
 
         RequestSpecification req = RestAssured.given();
         requestCreate = "{\n" +
-                "    \"name\":  \"     \",\n " +
-                "    \"job\" :   \"     \"\n" +
+                "    \"email\":  \"     \",\n " +
+                "    \"password\" :   \"     \"\n" +
                 "}" ;
 
     }
