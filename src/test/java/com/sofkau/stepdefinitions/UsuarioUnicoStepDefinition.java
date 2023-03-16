@@ -15,11 +15,15 @@ import static org.hamcrest.CoreMatchers.equalTo;
 
 
 public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
+
+
     public static final Logger LOGER = Logger.getLogger(UsuarioUnicoStepDefinition.class);
     private Response response;
     private RequestSpecification resquest;
 
-
+    /**
+     * Escenario 1
+     */
 
     @Given("me encuentro en la pagina")
     public void meEncuentroEnLaPagina() {
@@ -29,14 +33,35 @@ public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
 
     @When("realizo la peticion de consulta")
     public void realizoLaPeticionDeConsulta() {
-        response = when().get(LOGIN_RESOURCE);
+        response = when().get(LOGIN_RESOURCE1);
     }
 
     @Then("el sistema deberia de mostrarme el usuario")
     public void elSistemaDeberiaDeMostrarmeElUsuario() {
         response.then()
-                .statusCode(HttpStatus.SC_OK)
+                .statusCode(200)
                 .body("data.id", equalTo(2));
+    }
+
+
+    /**
+     * Escenario 2
+     */
+    @Given("me encuentro en la pagina de consulta")
+    public void meEncuentroEnLaPaginaDeConsulta() {
+        generalSetup();
+
+    }
+    @When("realizo la peticion de consulta de un usuario que no existe")
+    public void realizoLaPeticionDeConsultaDeUnUsuarioQueNoExiste() {
+        response = when().get(LOGIN_RESOURCE2);
+
+    }
+    @Then("el sistema deberia de mostrarme usuario no encontrado")
+    public void elSistemaDeberiaDeMostrarmeUsuarioNoEncontrado() {
+        response.then()
+                .statusCode(HttpStatus.SC_CREATED)
+                .body("data.id", equalTo(50));
     }
 
 }

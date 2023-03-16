@@ -9,14 +9,9 @@ Feature: usuario unico
     Then el sistema deberia de mostrarme el usuario
 
 
-
   Scenario: consulta fallida de un usuario
-    Given me encuentro en la pagina
-    When realizo la peticion de consulta
+    Given me encuentro en la pagina de consulta
+    When realizo la peticion de consulta de un usuario que no existe
     Then el sistema deberia de mostrarme usuario no encontrado
-    
 
-  Scenario: consulta exitosa de un usuario
-    Given me encuentro en la pagina
-    When realizo la peticion de consulta
-    Then el sistema deberia de mostrarme el usuario
+
