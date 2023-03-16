@@ -8,10 +8,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/practicereqres.feature"},
+        features = {"src/test/resources/features/practicepostreqres.feature"},
         glue = {"com.sofkau.stepdefinitions"},
         publish = true
 )
-public class GetReqresTest {
-
+public class PostReqresTest {
 }
