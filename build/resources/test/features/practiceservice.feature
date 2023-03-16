@@ -1,11 +1,15 @@
 Feature: Listar Usuarios
   yo como administrador de la API Reqres
-  quiero realizar una petición get
-  para poder listar usuarios
+  quiero obtener una lista de usuarios registrados
+  para poder ver quiénes están usando el servicio
+
+  Scenario: Obtener usuarios exitosamente
+    Given que el administrador quiere obtener un listado de usuarios
+    When envia una peticion correcta
+    Then debera recibir un listado de usuarios
 
 
-  Scenario: Respuesta exitosa
-    Given el administrador esta en la pagina principal
-    When navega hasta la opcion de los formularios
-    And completa los campos con la informacion del estudiante
-    Then entonces debe observar una ventana con la informacion ingresada
+  Scenario: Verificar mensaje de error
+    Given que el administrador quiere conseguir un listado de usuarios
+    When envia una peticion incorrecta
+    Then debera recibir un respuesta fallida
