@@ -49,4 +49,23 @@ public class CreateUserStepDefinition {
     public void deboObtenerUnaRespuestaDeError() {
         response.then().statusCode(400);
     }
+
+    //Scenario 3
+    @Given("Tengo la informacion sin trabajo")
+    public void tengoLaInformacionSinTrabajo() {
+        requestBody = "{\n" +
+                "    \"name\": \"morpheus\"\n" +
+                "}";
+    }
+    @When("la envio en una peticion sin trabajo")
+    public void laEnvioEnUnaPeticionSinTrabajo() {
+        response = RestAssured.given().
+                contentType(ContentType.JSON).
+                body(requestBody).
+                post("https://reqres.in/api/users");
+    }
+    @Then("debo obtener un error")
+    public void deboObtenerUnError() {
+        response.then().statusCode(400);
+    }
 }
