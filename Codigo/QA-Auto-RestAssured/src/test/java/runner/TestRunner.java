@@ -6,7 +6,8 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/test/resources/featureFiles/DemoRestAPITest.feature"},
+        snippets = CucumberOptions.SnippetType.CAMELCASE,
+        features = {"src/test/resources/featureFiles/RestAPIReqresDelete.feature"},
         glue = {"step.definitions"},
         publish = true
        // monochrome = true,
