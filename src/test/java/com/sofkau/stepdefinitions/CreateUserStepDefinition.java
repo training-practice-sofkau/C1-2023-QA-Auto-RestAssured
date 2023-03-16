@@ -6,10 +6,17 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.junit.jupiter.api.Assertions;
 
 public class CreateUserStepDefinition {
     private String requestBody;
     private Response response;
+
+    JSONParser parser = new JSONParser();
+    JSONObject responseBody = null;
 
     //Scenario 1
     @Given("tengo la informacion del usuario")
@@ -29,7 +36,14 @@ public class CreateUserStepDefinition {
     }
     @Then("debo obtener una respuesta positiva con los demas datos de creacion")
     public void deboObtenerUnaRespuestaPositivaConLosDemasDatosDeCreacion() {
-        System.out.println(response.asString());
+        try {
+            responseBody = (JSONObject) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        response.then().statusCode(201);
+        Assertions.assertEquals("morpheus",responseBody.get("name"));
+        Assertions.assertEquals("leader",responseBody.get("job"));
     }
 
     //Scenario 2
