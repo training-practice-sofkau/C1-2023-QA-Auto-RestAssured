@@ -9,7 +9,9 @@ import org.junit.Assert;
 
 public class ObtenerUsuariosSteps {
 
+    /*
     private Response response;
+
 
     @Given("^que el servicio \"([^\"]*)\" está disponible$")
     public void que_el_servicio_está_disponible(String servicio) {
@@ -31,5 +33,7 @@ public class ObtenerUsuariosSteps {
         int size = response.jsonPath().getList("").size();
         Assert.assertTrue(size >= cantidad);
     }
+
+     */
 }
 

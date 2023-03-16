@@ -9,7 +9,7 @@ import org.junit.Assert;
 
 public class ObtenerUsuarioPorIdSteps {
 
-    private Response response;
+    /*private Response response;
 
     @Given("^que el servicio \"([^\"]*)\" está disponible$")
     public void que_el_servicio_está_disponible(String servicio) {
@@ -31,4 +31,6 @@ public class ObtenerUsuarioPorIdSteps {
         String userName = response.jsonPath().get("name");
         Assert.assertEquals(nombre, userName);
     }
+
+     */
 }

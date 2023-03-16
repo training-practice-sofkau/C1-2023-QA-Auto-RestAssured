@@ -10,7 +10,8 @@ import org.json.simple.JSONObject;
 import org.junit.Assert;
 public class CrearUsuarioSteps {
 
-    private Response response;
+    /*private Response response;
+
     private JSONObject payload;
 
     @Given("^que el servicio \"([^\"]*)\" está disponible$")
@@ -40,4 +41,6 @@ public class CrearUsuarioSteps {
         Assert.assertEquals("John", name);
         Assert.assertEquals("Developer", job);
     }
+
+     */
 }

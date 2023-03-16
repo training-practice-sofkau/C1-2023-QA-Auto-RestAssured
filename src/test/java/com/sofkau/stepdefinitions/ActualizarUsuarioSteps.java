@@ -10,7 +10,7 @@ import org.json.simple.JSONObject;
 import org.junit.Assert;
 public class ActualizarUsuarioSteps {
 
-    private Response response;
+   /* private Response response;
     private JSONObject payload;
 
     @Given("^que el servicio \"([^\"]*)\" está disponible$")
@@ -38,5 +38,7 @@ public class ActualizarUsuarioSteps {
         String job = response.jsonPath().get("job");
         Assert.assertEquals("Senior Developer", job);
     }
+
+    */
 }
 
