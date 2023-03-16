@@ -1,0 +1,13 @@
+
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(²ÑµÂ
+—
+java:S1186"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(¿Ÿ”¸
+œ
+java:S1186)"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(Ôœ´Ìþÿÿÿÿ
+—
+java:S1186-"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(õß‰¸
+r
+java:S1450"WRemove the "response" field and declare it as a local variable in the relevant methods.(‘£ŠÄüÿÿÿÿ
+G
+java:S1068",Remove this unused "response" private field.(‘£ŠÄüÿÿÿÿ
