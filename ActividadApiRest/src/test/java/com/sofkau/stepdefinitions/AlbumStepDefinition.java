@@ -1,15 +1,19 @@
 package com.sofkau.stepdefinitions;
 
+import io.cucumber.core.gherkin.messages.internal.gherkin.internal.com.eclipsesource.json.JsonObject;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Assertions;
 
 public class AlbumStepDefinition {
     private String body;
     private Response response;
+
+    private JsonObject respondeJson;
     @Given("que creo la informacion del album")
     public void queCreoLaInformacionDelAlbum() {
         body="{\n"+
@@ -28,6 +32,8 @@ public class AlbumStepDefinition {
     public void obtengoUnaRespuestaOk2() {
         System.out.println(response.asString());
         System.out.println(body);
+
         response.then().statusCode(201);
+        //Assertions.assertEquals("quidem molestiae enim",response.get);
     }
 }

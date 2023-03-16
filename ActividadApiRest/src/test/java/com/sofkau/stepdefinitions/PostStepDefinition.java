@@ -40,6 +40,7 @@ public class PostStepDefinition {
         System.out.println(response.asString());
         System.out.println(body);
         response.then().statusCode(201);
+
         //JSONParser parser = new JSONParser();
         //JsonObject expectedJsonObject = (JsonObject) parser.parse(expectedJson);
         //JsonObject actualJsonObject = (JsonObject) parser.parse(body);
