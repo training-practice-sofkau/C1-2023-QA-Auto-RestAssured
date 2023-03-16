@@ -13,7 +13,7 @@ import static org.hamcrest.Matchers.equalTo;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/rest.feature"},
+        features = {"src/test/resources/features/Login.feature"},
         glue = {"com.sofkau.setupdefinitions"},
         publish = true)
 
