@@ -19,6 +19,7 @@ public class CreateUserStepDefinition {
                 "    \"job\": \"leader\"\n" +
                 "}";
     }
+
     @When("la envio en una peticion")
     public void laEnvioEnUnaPeticion() {
         response = RestAssured.given().
