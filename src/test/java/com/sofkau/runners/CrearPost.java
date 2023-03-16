@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/crearrusuariorq.feature"},
+        features = {"src/test/resources/features/crearpost.feature"},
         glue = {"com.sofkau.stepdefinitions"},
         publish = true
 )
-public class ReqresCrear {
+public class CrearPost {
 }

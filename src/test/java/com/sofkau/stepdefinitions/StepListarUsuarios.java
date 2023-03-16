@@ -8,7 +8,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.junit.Assert;
-public class StepDefinitions {
+public class StepListarUsuarios {
     private String endpoint;
     private String query;
     private Response response;
@@ -26,7 +26,6 @@ public class StepDefinitions {
                 .queryParam("page", query)
                 .get();
     }
-
     @Then("el codigo de respuesta es {int}")
     public void el_codigo_de_respuesta_es(int statusCode) {
         Assert.assertEquals(statusCode, response.getStatusCode());
