@@ -5,11 +5,19 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.junit.jupiter.api.Assertions;
 
 public class JsonPlacePostStepDefinition {
     private String url;
     private Response response;
     private int id;
+
+    JSONParser parser = new JSONParser();
+    JSONObject responseBody = null;
 
     //Scenario 1
     @Given("se donde encontrar los posts")
@@ -22,7 +30,19 @@ public class JsonPlacePostStepDefinition {
     }
     @Then("debo obtener una respuesta positiva con los posts disponibles")
     public void deboObtenerUnaRespuestaPositivaConLosPostsDisponibles() {
-        System.out.println(response.asString());
+        response.then().statusCode(200);
+        JSONArray responseBody;
+        try {
+            responseBody = (JSONArray) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return;
+        }
+        for (Object obj : responseBody) {
+            JSONObject post = (JSONObject) obj;
+            int postId = ((Long) post.get("id")).intValue();
+            Assertions.assertTrue(postId > 0 && postId <= 100);
+        }
     }
 
     //Scenario 2
@@ -37,7 +57,13 @@ public class JsonPlacePostStepDefinition {
     }
     @Then("debo obtener el post que solicite")
     public void deboObtenerElPostQueSolicite() {
-        System.out.println(response.asString());
+        try {
+            responseBody = (JSONObject) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        response.then().statusCode(200);
+        Assertions.assertEquals(4,(int) (long) responseBody.get("id"));
     }
 
     //Scenario 3
@@ -53,7 +79,7 @@ public class JsonPlacePostStepDefinition {
     }
     @Then("debo obtener un error porque no existe")
     public void deboObtenerUnErrorPorqueNoExiste() {
-        System.out.println(response.asString());
+        response.then().statusCode(404);
     }
 
 }
