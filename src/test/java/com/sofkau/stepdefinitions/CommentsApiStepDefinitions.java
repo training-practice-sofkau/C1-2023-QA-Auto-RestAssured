@@ -5,12 +5,20 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.junit.jupiter.api.Assertions;
 
 public class CommentsApiStepDefinitions {
 
     private String url;
     private Response response;
     private int id;
+
+    JSONParser parser = new JSONParser();
+    JSONObject responseBody = null;
 
     //Scenario1
     @Given("Tengo la id de un post")
@@ -24,7 +32,19 @@ public class CommentsApiStepDefinitions {
     }
     @Then("debo obtener una respuesta con los comentarios de ese post")
     public void deboObtenerUnaRespuestaConLosComentariosDeEsePost() {
-        System.out.println(response.asString());
+        response.then().statusCode(200);
+        JSONArray responseBody;
+        try {
+            responseBody = (JSONArray) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return;
+        }
+        for (Object obj : responseBody) {
+            JSONObject post = (JSONObject) obj;
+            int postId = ((Long) post.get("id")).intValue();
+            Assertions.assertTrue(postId > 15 && postId <= 20);
+        }
     }
 
     //Scenario 2
@@ -40,6 +60,6 @@ public class CommentsApiStepDefinitions {
     }
     @Then("debo obtener un error debido al post inexistente")
     public void deboObtenerUnErrorDebidoAlPostInexistente() {
-        System.out.println(response.asString());
+        response.then().statusCode(400);
     }
 }
