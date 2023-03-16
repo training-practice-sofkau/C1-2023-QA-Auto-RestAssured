@@ -25,4 +25,21 @@ public class JSONPlaceHolderTest {
 
 
     }
+
+    @Test
+    public void getLimitedUsers() {
+        RestAssured
+                .given()
+                .log()
+                .all()
+                .param("_limit", 5)
+                .when().get("https://jsonplaceholder.typicode.com/users")
+                .then()
+                .log()
+                .all()
+                .statusCode(200)
+                .body("size()", equalTo(5));
+    }
+
+
 }
