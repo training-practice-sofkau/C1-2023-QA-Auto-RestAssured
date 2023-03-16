@@ -12,3 +12,4 @@ Feature: Mostrar usuario
     Given que el administrador quiere tener informacion de un usuario
     When envia una solicitud invalida en la ruta
     Then debera recibir una respuesta invalida
+

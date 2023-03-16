@@ -7,27 +7,30 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.junit.jupiter.api.Assertions;
 
 public class ApiStepDefinition extends CommonActionOnPage {
     private Response response;
 
     @Given("que el administrador quiere obtener informacion de un usuario")
     public void queElAdministradorQuiereObtenerInformacionDeUnUsuario() {
-        response = RestAssured
-                .given()
-                .contentType(ContentType.JSON)
-                .get("https://reqres.in/api/users/2");
+        RestAssured.baseURI = "https://reqres.in";
+
+
     }
 
     @When("envia una solicitud valida")
     public void enviaUnaSolicitudValida() {
-
+        response = RestAssured
+                .given()
+                .contentType(ContentType.JSON)
+                .get("/api/users/2");
     }
 
     @Then("debera recibir los datos personales del usuario")
     public void deberaRecibirLosDatosPersonalesDelUsuario() {
-        System.out.println("--Body-- \n");
         String responseBody = response.then().log().all().statusCode(200).extract().body().asString();
+        Assertions.assertEquals(response.getStatusCode(),200);
     }
 
     @Given("que el administrador quiere tener informacion de un usuario")
