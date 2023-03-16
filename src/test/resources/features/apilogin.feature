@@ -1,6 +1,6 @@
 Feature: Login Usuario
   yo como usuario
-  quiero enviar enviar una peticion de logeo
+  quiero enviar una peticion de logeo
   para poder loguearme en la plataforma
 
   Scenario: Login exitoso

@@ -13,7 +13,7 @@ Feature: Consultar posts
     When envio una solicitud con el numero del post
     Then debo obtener el post que solicite
 
-  Scenario: Consultar un post que no exite
+  Scenario: Consultar un post que no existe
     Given Tengo un id de una post incorrecto
     When envio una solicitud con id incorrecto
     Then debo obtener un error porque no existe
