@@ -21,14 +21,13 @@ public class LoginSetupDefinitions {
                 "    \"password\": \"pistol\"\n" +
                 "}}";
     }
-    @When("la solicitud es exitosa")
-    public void laSolicitudEsExitosa() {
+    @When("envio la solicitud para loguearme")
+    public void envioLaSolicitudParaLoguearme() {
         response = RestAssured.given()
-               .log().all()
+                .log().all()
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .post("https://reqres.in/api/register");
-
     }
     @Then("debera mostrar un tocken")
     public void deberaMostrarUnTocken() {
@@ -47,15 +46,15 @@ public class LoginSetupDefinitions {
                 "    \"password\": \"pistol\"\n" +
                 "}}";
     }
-    @When("la solicitud no es exitosa")
-    public void laSolicitudNoEsExitosa() {
+    @When("envio solicitud para loguearme con email invalido")
+    public void envioSolicitudParaLoguearmeConEmailInvalido() {
         response = RestAssured.given()
                 .log().all()
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .post("https://reqres.in/api/register");
-
     }
+
     @Then("debera mostrar un mensaje de error de usuario no encontrado")
     public void deberaMostrarUnMensajeDeErrorDeUsuarioNoEncontrado() {
         response.then()
@@ -74,14 +73,17 @@ public class LoginSetupDefinitions {
                 "    \"password\": \"\"\n" +
                 "}}";
     }
-    @When("la solicitud de login no es exitosa")
-    public void laSolicitudDeLoginNoEsExitosa() {
+
+    @When("envio la solicitud para loguarme sin password")
+    public void envioLaSolicitudParaLoguarmeSinPassword() {
         response = RestAssured.given()
                 .log().all()
                 .contentType(ContentType.JSON)
                 .body(requestBody)
                 .post("https://reqres.in/api/register");
+
     }
+
     @Then("mostrara un mensaje de error indicando que password es requerida")
     public void mostraraUnMensajeDeErrorIndicandoQuePasswordEsRequerida() {
         response.then()

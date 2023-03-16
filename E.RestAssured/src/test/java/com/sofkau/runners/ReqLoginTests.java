@@ -2,13 +2,9 @@ package com.sofkau.runners;
 
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
-import io.restassured.RestAssured;
-import io.restassured.http.ContentType;
-import org.junit.Test;
 import org.junit.runner.RunWith;
 
 import static org.hamcrest.Matchers.notNullValue;
-import static org.hamcrest.Matchers.equalTo;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -17,6 +13,6 @@ import static org.hamcrest.Matchers.equalTo;
         glue = {"com.sofkau.setupdefinitions"},
         publish = true)
 
-public class ReqResTests {
+public class ReqLoginTests {
 
 }
