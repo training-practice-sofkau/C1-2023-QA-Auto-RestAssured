@@ -33,20 +33,22 @@ public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
 
     @When("realizo la peticion de consulta")
     public void realizoLaPeticionDeConsulta() {
-        response = when().get(LOGIN_RESOURCE1);
+
+        response = when().get(RESOURCE1);
     }
 
     @Then("el sistema deberia de mostrarme el usuario")
     public void elSistemaDeberiaDeMostrarmeElUsuario() {
         response.then()
                 .statusCode(200)
-                .body("data.id", equalTo(2));
+                .body("data.id", equalTo(5));
     }
 
 
     /**
      * Escenario 2
      */
+
     @Given("me encuentro en la pagina de consulta")
     public void meEncuentroEnLaPaginaDeConsulta() {
         generalSetup();
@@ -54,7 +56,7 @@ public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
     }
     @When("realizo la peticion de consulta de un usuario que no existe")
     public void realizoLaPeticionDeConsultaDeUnUsuarioQueNoExiste() {
-        response = when().get(LOGIN_RESOURCE2);
+        response = when().get(RESOURCE2);
 
     }
     @Then("el sistema deberia de mostrarme usuario no encontrado")

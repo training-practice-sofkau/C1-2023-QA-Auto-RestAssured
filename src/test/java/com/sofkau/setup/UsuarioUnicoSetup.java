@@ -9,9 +9,9 @@ public class UsuarioUnicoSetup {
 
     private static final String BASE_URI = "https://reqres.in";
     private static final String BASE_PATH = "/api";
-    protected static final String LOGIN_RESOURCE1 = "/user/2";
+    protected static final String RESOURCE1 = "/user/5";
 
-    protected static final String LOGIN_RESOURCE2 = "/user/50";
+    protected static final String RESOURCE2 = "/user/50";
 
     protected void generalSetup() {
         setUpLog4j2();
