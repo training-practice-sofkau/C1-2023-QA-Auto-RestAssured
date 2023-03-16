@@ -6,11 +6,18 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
+import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
+import org.junit.jupiter.api.Assertions;
 
 public class LoginUserStepDefinition {
 
     private String requestBody;
     private Response response;
+
+    JSONParser parser = new JSONParser();
+    JSONObject responseBody = null;
 
     //Scenario 1
     @Given("tengo credenciales para loguearme")
@@ -29,7 +36,13 @@ public class LoginUserStepDefinition {
     }
     @Then("debo obtener un token de inicio de sesion")
     public void deboObtenerUnTokenDeInicioDeSesion() {
-        System.out.println(response.asString());
+        try {
+            responseBody = (JSONObject) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        response.then().statusCode(200);
+        Assertions.assertEquals("QpwL5tke4Pnpja7X4",responseBody.get("token"));
     }
 
     //Scenario 2
@@ -49,7 +62,13 @@ public class LoginUserStepDefinition {
     }
     @Then("debo obtener un error al loguearme")
     public void deboObtenerUnErrorAlLoguearme() {
-        System.out.println(response.asString());
+        response.then().statusCode(400);
+        try {
+            responseBody = (JSONObject) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Assertions.assertEquals("user not found",responseBody.get("error"));
     }
 
     //Scenario 3
@@ -70,6 +89,12 @@ public class LoginUserStepDefinition {
 
     @Then("debo obtener un error logueandome")
     public void deboObtenerUnErrorLogueandome() {
-        System.out.println(response.asString());
+        response.then().statusCode(400);
+        try {
+            responseBody = (JSONObject) parser.parse(response.getBody().asString());
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        Assertions.assertEquals("Missing email or username",responseBody.get("error"));
     }
 }
