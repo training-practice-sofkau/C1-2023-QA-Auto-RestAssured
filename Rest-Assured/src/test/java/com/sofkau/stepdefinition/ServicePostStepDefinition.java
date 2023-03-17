@@ -7,12 +7,15 @@ public class ServicePostStepDefinition {
     public static Logger LOGGER = Logger.getLogger(String.valueOf(ServicePostStepDefinition.class));
     @Given("el usuario ingresa su nombre")
     public void elUsuarioIngresaSuNombre() {
+        LOGGER.info("Inicio de la automatizacion Reqres");
     }
     @Given("el usuario ingresa su nobre y trabajo")
     public void elUsuarioIngresaSuNobreYTrabajo() {
+        LOGGER.info("Inicio de la automatizacion Reqres");
     }
     @Given("el usuario ingresa su nobre, trabajo y edad")
     public void elUsuarioIngresaSuNobreTrabajoYEdad() {
+        LOGGER.info("Inicio de la automatizacion Reqres");
     }
     @When("el sistema no coloca la coma al hacer la peticion")
     public void elSistemaNoColocaLaComaAlHacerLaPeticion() {

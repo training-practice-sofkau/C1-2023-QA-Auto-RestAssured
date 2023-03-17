@@ -5,11 +5,11 @@ Feature: Obtener lista de usuarios
 
   Scenario: Lista recibida correctamente
     Given el administrador esta en la pagina
-    When hace la peticion al servicio
+    When hace la peticion de usuarios al servicio place holder
     Then recibe un json con la lista de usuarios
 
   Scenario: Lista no recibida
     Given el administrador esta en la pagina
-    When hace la peticion al servicio
+    When hace la peticion de usuarios al servicio place holder
     But le agrega un path con una palabra
     Then recibe un error de not found
