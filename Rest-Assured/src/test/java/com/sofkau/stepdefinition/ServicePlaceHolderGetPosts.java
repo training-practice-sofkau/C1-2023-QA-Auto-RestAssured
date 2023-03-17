@@ -8,9 +8,7 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
-
-import java.util.logging.Logger;
-
+import org.apache.log4j.Logger;
 import static com.sofkau.setup.ConstantSetUp.*;
 
 public class ServicePlaceHolderGetPosts {
@@ -40,7 +38,7 @@ public class ServicePlaceHolderGetPosts {
             }
             Assertions.assertTrue(responses.size()>0);
         }catch (Exception e){
-            LOGGER.warning(e.getMessage());
+            LOGGER.warn(e.getMessage());
             Assertions.fail();
         }finally {
             LOGGER.info("| Esperado | Obtenido | Valor |");
