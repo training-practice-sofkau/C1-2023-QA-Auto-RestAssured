@@ -5,7 +5,7 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/practiceservicereqrespost.feature"},
+        features = {"src/test/resources/features"},
         glue = {"com.sofkau.stepdefinition"},
         publish = true
 )
