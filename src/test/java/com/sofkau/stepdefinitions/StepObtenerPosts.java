@@ -6,7 +6,6 @@ import io.cucumber.java.en.When;
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 import org.junit.jupiter.api.Assertions;
@@ -37,8 +36,16 @@ public class StepObtenerPosts {
     public void seDebeDevolverUnaRespuestaExitosaConLaListaDePosts() {
         try {
             responseBody = (JSONArray) parser.parse(response.getBody().asString());
-            Assertions.assertEquals(response.getStatusCode(), 200);
-            Assertions.assertEquals(responseBody.size(), 100);
+            int expectedStatusCode = 200;
+            int actualStatusCode = response.getStatusCode();
+            LOGGER.info("Valor esperado: " + expectedStatusCode + ", valor obtenido: " + actualStatusCode);
+            Assertions.assertEquals(expectedStatusCode, actualStatusCode);
+
+            int expectedResponseSize = 100;
+            int actualResponseSize = responseBody.size();
+            LOGGER.info("Valor esperado: " + expectedResponseSize + ", valor obtenido: " + actualResponseSize);
+            Assertions.assertEquals(expectedResponseSize, actualResponseSize);
+
         } catch (ParseException e) {
             LOGGER.warning(e.getMessage());
             Assertions.fail();
@@ -55,8 +62,16 @@ public class StepObtenerPosts {
     public void seDebeDevolverUnaRespuestaExitosaConElPostCorrespondiente() {
         try {
             responseBody = (JSONArray) parser.parse(response.getBody().asString());
-            Assertions.assertEquals(response.getStatusCode(), 200);
-            Assertions.assertEquals(responseBody.get(1), 1);
+            int expectedStatusCode = 200;
+            int actualStatusCode = response.getStatusCode();
+            LOGGER.info("Valor esperado: " + expectedStatusCode + ", valor obtenido: " + actualStatusCode);
+            Assertions.assertEquals(expectedStatusCode, actualStatusCode);
+
+            int expectedPostId = 1;
+            int actualPostId = Integer.parseInt(responseBody.get(1).toString());
+            LOGGER.info("Valor esperado: " + expectedPostId + ", valor obtenido: " + actualPostId);
+            Assertions.assertEquals(expectedPostId, actualPostId);
+
         } catch (ParseException e) {
             LOGGER.warning(e.getMessage());
             Assertions.fail();
@@ -71,7 +86,10 @@ public class StepObtenerPosts {
 
     @Then("se debe devolver una respuesta de error")
     public void seDebeDevolverUnaRespuestaDeError() {
-        response.then().statusCode(404);
+        int expectedStatusCode = 404;
+        int actualStatusCode = response.getStatusCode();
+        LOGGER.info("Valor esperado: " + expectedStatusCode + ", valor obtenido: " + actualStatusCode);
+        response.then().statusCode(expectedStatusCode);
     }
 }
 

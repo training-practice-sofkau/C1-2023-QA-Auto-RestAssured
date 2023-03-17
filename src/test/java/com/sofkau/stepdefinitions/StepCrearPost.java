@@ -46,6 +46,9 @@ public class StepCrearPost {
             Assertions.assertEquals("Nuevo post", responseBody.get("title"));
             Assertions.assertEquals("Contenido del post", responseBody.get("body"));
             Assertions.assertEquals(1L, responseBody.get("userId"));
+            LOGGER.info("Valor esperado: Nuevo post | Valor obtenido: " + responseBody.get("title") + " | Cumple: " + responseBody.get("title").equals("Nuevo post"));
+            LOGGER.info("Valor esperado: Contenido del post | Valor obtenido: " + responseBody.get("body") + " | Cumple: " + responseBody.get("body").equals("Contenido del post"));
+            LOGGER.info("Valor esperado: 1 | Valor obtenido: " + responseBody.get("userId") + " | Cumple: " + responseBody.get("userId").equals(1L));
         } catch (ParseException e) {
             LOGGER.warning(e.getMessage());
             Assertions.fail();

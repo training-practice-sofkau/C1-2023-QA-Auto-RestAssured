@@ -4,29 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c79c6dfb-04d7-4ac1-9705-33f7acbabb9c" name="Changes" comment="Servicio de crear usuario agregado">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/ObtenerPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/ObtenerUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepCrearPost.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepCrearUsuario.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepListaUsuarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerPosts.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerUsuarios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/CrearPost.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/ListaUsuarios.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/ObtenerPosts.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/ReqresTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/CrearPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/CrearPost.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/CreateUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/EjecucionGeneral.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/ListUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/ListaUsuarios.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/ReqresUpdate.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/runners/CrearUsuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/ActualizarUsuarioSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/CrearPublicacion.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/CreateUsers.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepListarUsuarios.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/AlgunServicio.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/crearusers.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/CrearUsuario.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/listarusuarios.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/ObtenerID.feature" afterDir="false" />
+    <list default="true" id="c79c6dfb-04d7-4ac1-9705-33f7acbabb9c" name="Changes" comment="Servicios agregados">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepCrearPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepCrearPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerPosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerPosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerUsuarios.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,21 +70,21 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SONARLINT_PRECOMMIT_ANALYSIS": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "E:/Curso Automatización QA/C1-2023-QA-Auto-RestAssured/src/test/resources/features",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Curso Automatización QA/C1-2023-QA-Auto-RestAssured/src/test/resources/features&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="E:\Curso Automatización QA\C1-2023-QA-Auto-RestAssured\src\test\resources\features" />
@@ -112,7 +97,7 @@
       <recent name="com.sofkau.stepdefinitions" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.ListUsuario">
+  <component name="RunManager" selected="JUnit.ObtenerPost">
     <configuration name="CrearPost" type="JUnit" factoryName="JUnit">
       <module name="C1-2023-QA-Auto-RestAssured.test" />
       <option name="PACKAGE_NAME" value="com.sofkau.runners" />
@@ -182,7 +167,8 @@
       <workItem from="1678974741424" duration="7927000" />
       <workItem from="1678984514625" duration="1976000" />
       <workItem from="1678988313770" duration="18000" />
-      <workItem from="1678992101408" duration="32686000" />
+      <workItem from="1678992101408" duration="33294000" />
+      <workItem from="1679056810677" duration="3207000" />
     </task>
     <task id="LOCAL-00001" summary="Creando estructura del proyecto">
       <created>1678978556933</created>
