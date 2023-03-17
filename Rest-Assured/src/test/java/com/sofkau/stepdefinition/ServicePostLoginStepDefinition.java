@@ -31,8 +31,8 @@ public class ServicePostLoginStepDefinition {
                 "}";
         LOGGER.info("Inicio de la automatizacion Reqres");
     }
-    @When("hace la peticion al servicio")
-    public void haceLaPeticionAlServicio() {
+    @When("hace la peticion al servicio de Log in")
+    public void haceLaPeticionAlServicioDeLogIn() {
         String url=REQRES_URL+REQRES_LOGIN;
         response= RestAssured.given().contentType(ContentType.JSON).body(requestBody).post(url);
     }
@@ -57,5 +57,21 @@ public class ServicePostLoginStepDefinition {
     }
     @Then("recibe un json diciendo que falta la contrasena")
     public void recibeUnJsonDiciendoQueFaltaLaContrasena() {
+        JsonObject bodyRespuesta;
+        Gson gson=new Gson();
+        try{
+            bodyRespuesta=gson.fromJson(response.getBody().asString(),JsonObject.class);
+            Assertions.assertEquals(400,response.statusCode());
+            Assertions.assertEquals("Missing password",bodyRespuesta.get("error").toString().substring(1,17));
+        }catch (Exception e){
+            LOGGER.warn(e.getMessage());
+            Assertions.fail();
+        }finally {
+            LOGGER.info("| Esperado | Obtenido | Valor |");
+            if (400==response.statusCode())
+                LOGGER.info("| 400 | "+response.statusCode()+" | Cumple |");
+            else
+                LOGGER.info("| 400 | "+response.statusCode()+" | No cumple |");
+        }
     }
 }
