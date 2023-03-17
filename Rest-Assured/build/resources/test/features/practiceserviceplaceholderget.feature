@@ -6,7 +6,7 @@ Feature: Obtener lista de usuarios
   Scenario: Lista recibida correctamente
     Given el administrador esta en la pagina
     When hace la peticion al servicio
-    Then recibe un json con la lista de posts
+    Then recibe un json con la lista de usuarios
 
   Scenario: Lista no recibida
     Given el administrador esta en la pagina
