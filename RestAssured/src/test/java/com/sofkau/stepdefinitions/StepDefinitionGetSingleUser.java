@@ -16,7 +16,7 @@ import static com.sofkau.util.Resources.*;
 
 public class StepDefinitionGetSingleUser extends Log4jSetUp {
 
-    public static Logger LOGGER = Logger.getLogger(StepDefinitionDelete.class);
+    public static Logger LOGGER = Logger.getLogger(StepDefinitionGetSingleUser.class);
     Response response;
     JSONParser parser = new JSONParser();
     JSONObject responseBody = null;

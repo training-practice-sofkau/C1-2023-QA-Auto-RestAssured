@@ -7,4 +7,5 @@ public class Resources {
     public static final String EXPECTED_DATA_SINGLE_USER = "data";
     public static final String SUPPORT_SINGLE_USER = "support";
     public static final String GET_SINGLE_USER_NOT_FOUND = "https://reqres.in/api/users/200";
+    public static final String DELETE_POST_RESOURCE = "https://reqres.in/api/users/2";
 }
