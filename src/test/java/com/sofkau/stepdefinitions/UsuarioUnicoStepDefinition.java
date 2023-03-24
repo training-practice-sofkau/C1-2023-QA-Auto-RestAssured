@@ -6,7 +6,6 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
-import org.apache.http.HttpStatus;
 import org.apache.log4j.Logger;
 import com.sofkau.setup.UsuarioUnicoSetup;
 
@@ -25,8 +24,8 @@ public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
      * Escenario 1
      */
 
-    @Given("me encuentro en la pagina")
-    public void meEncuentroEnLaPagina() {
+    @Given("me encuentro en la pagina reqres")
+    public void meEncuentroEnLaPaginaReqres() {
         generalSetup();
 
     }
@@ -34,7 +33,7 @@ public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
     @When("realizo la peticion de consulta")
     public void realizoLaPeticionDeConsulta() {
 
-        response = when().get(RESOURCE1);
+        response = when().get(GET_RESOURCE);
     }
 
     @Then("el sistema deberia de mostrarme el usuario")
@@ -54,16 +53,18 @@ public class UsuarioUnicoStepDefinition extends UsuarioUnicoSetup {
         generalSetup();
 
     }
+
     @When("realizo la peticion de consulta de un usuario que no existe")
     public void realizoLaPeticionDeConsultaDeUnUsuarioQueNoExiste() {
-        response = when().get(RESOURCE2);
+        response = when().get(GET_RESOURCE1);
 
     }
+
     @Then("el sistema deberia de mostrarme usuario no encontrado")
     public void elSistemaDeberiaDeMostrarmeUsuarioNoEncontrado() {
         response.then()
-                .statusCode(HttpStatus.SC_CREATED)
-                .body("data.id", equalTo(50));
+                .statusCode(404)
+                .body("data.id", equalTo(200));
     }
 
 }

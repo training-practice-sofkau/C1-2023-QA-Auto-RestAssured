@@ -7,6 +7,7 @@ public enum log4j {
     //LOAD(); MANEJO DE LAS CONTANTES NO MAS DE 20
 
 
+
     private final String value;
 
     log4j(String value) {
