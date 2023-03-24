@@ -20,15 +20,17 @@ public class PostReqresStepDefinition {
 
     @Given("que el usuario esta en la pagina de registro")
     public void queElUsuarioEstaEnLaPaginaDeRegistro() {
-        requestBody = "{\n" +
-                "    \"email\": \"eve.holt@reqres.in\",\n" +
-                "    \"password\": \"pistol\"\n" +
-                "}";
 
         RestAssured.baseURI = "https://reqres.in/";
     }
     @When("envia la peticion de registro con un email valido")
     public void enviaLaPeticionDeRegistroConUnEmailValido() {
+        requestBody = "{\n" +
+                "    \"email\": \"eve.holt@reqres.in\",\n" +
+                "    \"password\": \"pistol\"\n" +
+                "}";
+
+
         response = RestAssured.given().
                 contentType(ContentType.JSON).
                 body(requestBody).
@@ -54,11 +56,32 @@ public class PostReqresStepDefinition {
     //Scenario 2
     @When("envia la peticion de registro con un email invalido")
     public void enviaLaPeticionDeRegistroConUnEmailInvalido() {
+        requestBody = "{\n" +
+                "    \"email\": \"jesus@reqres.in\",\n" +
+                "    \"password\": \"pistola\"\n" +
+                "}";
+
+
+        response = RestAssured.given().
+                contentType(ContentType.JSON).
+                body(requestBody).
+                post("api/register");
 
     }
     @Then("debe recibir una respuesta con mensaje de error y  un codigo de status {int}")
     public void debeRecibirUnaRespuestaConMensajeDeErrorYUnCodigoDeStatus(Integer statusCode) {
+        String responseBody = response.then().log().all().extract().asString();
+        Assertions.assertEquals(statusCode, response.getStatusCode());
 
+        JSONParser parser = new JSONParser();
+        JSONObject jsonObject = null;
+        try {
+            jsonObject = (JSONObject) parser.parse(responseBody);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        String error = (String) jsonObject.get("error");
+        Assertions.assertEquals("Note: Only defined users succeed registration", error);
     }
 
 
