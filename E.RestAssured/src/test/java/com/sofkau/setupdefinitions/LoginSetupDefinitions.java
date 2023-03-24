@@ -1,6 +1,9 @@
 package com.sofkau.setupdefinitions;
 
+<<<<<<< HEAD
+=======
 import groovy.util.logging.Log;
+>>>>>>> d0d5d078fba388a349b2b92515500ad55b06ae28
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -8,12 +11,18 @@ import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 
+<<<<<<< HEAD
+public class LoginSetupDefinitions {
+    private String requestBody;
+    private Response response;
+=======
 import static org.hamcrest.Matchers.notNullValue;
 
 public class LoginSetupDefinitions {
     private String requestBody;
     private Response response;
 
+>>>>>>> d0d5d078fba388a349b2b92515500ad55b06ae28
     @Given("que realizo una solicitud para loguearme")
     public void queRealizoUnaSolicitudParaLoguearme() {
         requestBody = "{{\n" +
@@ -21,6 +30,21 @@ public class LoginSetupDefinitions {
                 "    \"password\": \"pistol\"\n" +
                 "}}";
     }
+<<<<<<< HEAD
+    @When("la solicitud es exitosa")
+    public void laSolicitudEsExitosa() {
+        response = RestAssured.given().
+                contentType(ContentType.JSON)
+                .body(requestBody)
+                .post("https://reqres.in/api/register");
+
+
+    }
+    @Then("debera mostrar un tocken")
+    public void deberaMostrarUnTocken() {
+        System.out.println(response.asString());
+    }
+=======
     @When("envio la solicitud para loguearme")
     public void envioLaSolicitudParaLoguearme() {
         response = RestAssured.given()
@@ -93,4 +117,5 @@ public class LoginSetupDefinitions {
         //System.out.println(response.asString());
     }
 
+>>>>>>> d0d5d078fba388a349b2b92515500ad55b06ae28
 }

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: io.cucumber:cucumber-core:6.11.0">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/6.11.0/a768ab2971eaea01c63e8c49cd34023e57ae4a55/cucumber-core-6.11.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.cucumber/cucumber-core/6.11.0/d1eb1f62755435152841af9c67ca51d9c44dae42/cucumber-core-6.11.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
