@@ -12,9 +12,9 @@ import static org.hamcrest.Matchers.notNullValue;
 import static org.hamcrest.Matchers.equalTo;
 
 public class ProductosSetupDefinitions {
-    private String phat;
+
     private String requestBody;
-    private Request request;
+
     private Response response;
 
 
