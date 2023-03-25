@@ -12,4 +12,4 @@ Feature: Listar Usuarios
   Scenario: Verificar mensaje de error
     Given que el administrador quiere conseguir un listado de usuarios
     When envia una peticion incorrecta
-    Then debera recibir un respuesta codigo de estado 400
+    Then debera recibir un respuesta codigo de estado 404

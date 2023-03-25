@@ -7,7 +7,7 @@ import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import org.junit.jupiter.api.Assertions;
 
-public class DeletePlaceholderTest {
+public class DeletePlaceholderStepDefinition {
     private Response response;
     @Given("que el administrador conoce el id de una publicacion")
     public void queElAdministradorConoceElIdDeUnaPublicacion() {
