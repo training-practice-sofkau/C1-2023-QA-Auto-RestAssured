@@ -7,9 +7,9 @@ import org.junit.runner.RunWith;
 @RunWith(Cucumber.class)
 @CucumberOptions(
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        features = {"src/test/resources/features/ListResource.feature"},
+        features = {"src/test/resources/features/CreateResource.feature"},
         glue = {"com.sofkau.stepdefs"},
         publish = true
 )
-public class ListResourceTest {
+public class CreateResourceTest {
 }

@@ -1,6 +1,6 @@
 Feature: Create users
   As: REQRES services consumer
-  I want: To know create some users
+  I want: To create some users
   So that
 
   Background: I am at Home Page
@@ -9,8 +9,8 @@ Feature: Create users
 
   Scenario Outline: Valid users
     When I add a valid JSON body
-    And I use a <name> and <job> in it
-    Then I will get a creation ID
+    And I use a '<name>' and '<job>' in it
+    Then I will get a creation ID for '<name>' the '<job>'
     Examples:
       | name | job |
       | John | Doe |
