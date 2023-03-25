@@ -13,5 +13,5 @@ Feature: Registrar usuarios
 
   Scenario: Registro Fallido
     When envia la peticion de registro con un email invalido
-    Then debe recibir una respuesta con mensaje de error y  un codigo de status 400
+    Then debe recibir una respuesta con mensaje de error y  un codigo de status 400e
 

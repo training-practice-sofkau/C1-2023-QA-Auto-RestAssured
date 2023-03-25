@@ -26,7 +26,7 @@ public class ServiceStepDefinition {
     public void enviaUnaPeticionCorrecta() {
         response = RestAssured
                 .when()
-                    .get("/api/users/2");
+                    .get("api/users/2");
     }
 
     @Then("debera recibir informacion del usuario y un codigo de estado {int}")
@@ -46,14 +46,12 @@ public class ServiceStepDefinition {
     public void enviaUnaPeticionIncorrecta() {
         response = RestAssured
                 .when()
-                    .get("/api/users/#$%");
+                    .get("api/users/#$%");
     }
     @Then("debera recibir un respuesta codigo de estado {int}")
     public void deberaRecibirUnRespuestaCodigoDeEstado(Integer statusCode) {
         String responseBody = response.then().log().all().extract().asString();
         Assertions.assertEquals(statusCode, response.getStatusCode());
-
-
     }
 
 }
