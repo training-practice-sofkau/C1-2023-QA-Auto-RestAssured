@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c79c6dfb-04d7-4ac1-9705-33f7acbabb9c" name="Changes" comment="Servicios agregados">
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepCrearPost.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepCrearPost.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerPosts.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerPosts.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerUsuarios.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/sofkau/stepdefinitions/StepObtenerUsuarios.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="C1-2023-QA-Auto-RestAssured" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="C1-2023-QA-Auto-RestAssured" type="f1a62948:ProjectNode" />
+                <item name="Run Configurations" type="7b0102dc:RunConfigurationsNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2N6BdQhnxrV6xb8Bn1OyeugcZ6g" />
+  <component name="ProjectViewState">
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SONARLINT_PRECOMMIT_ANALYSIS&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/Curso Automatización QA/C1-2023-QA-Auto-RestAssured/src/test/resources/features&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Curso Automatización QA\C1-2023-QA-Auto-RestAssured\src\test\resources\features" />
+      <recent name="E:\Curso Automatización QA\C1-2023-QA-Auto-RestAssured\src\test" />
+      <recent name="E:\Curso Automatización QA\C1-2023-QA-Auto-RestAssured\src\test\java" />
+      <recent name="E:\Curso Automatización QA\C1-2023-QA-Auto-RestAssured\src\main\java" />
+      <recent name="E:\Curso Automatización QA\C1-2023-QA-Auto-RestAssured" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.sofkau.stepdefinitions" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.ObtenerPost">
+    <configuration name="CrearPost" type="JUnit" factoryName="JUnit">
+      <module name="C1-2023-QA-Auto-RestAssured.test" />
+      <option name="PACKAGE_NAME" value="com.sofkau.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.sofkau.runners.CrearPost" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CrearUsuario" type="JUnit" factoryName="JUnit">
+      <module name="C1-2023-QA-Auto-RestAssured.test" />
+      <option name="PACKAGE_NAME" value="com.sofkau.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.sofkau.runners.CrearUsuario" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ListUsuario" type="JUnit" factoryName="JUnit">
+      <module name="C1-2023-QA-Auto-RestAssured.test" />
+      <option name="PACKAGE_NAME" value="com.sofkau.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.sofkau.runners.ListaUsuarios" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ObetenerUsuario" type="JUnit" factoryName="JUnit">
+      <module name="C1-2023-QA-Auto-RestAssured.test" />
+      <option name="PACKAGE_NAME" value="com.sofkau.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.sofkau.runners.ObtenerUsuario" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ObtenerPost" type="JUnit" factoryName="JUnit">
+      <module name="C1-2023-QA-Auto-RestAssured.test" />
+      <option name="PACKAGE_NAME" value="com.sofkau.runners" />
+      <option name="MAIN_CLASS_NAME" value="com.sofkau.runners.ObtenerPost" />
+      <option name="METHOD_NAME" value="" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="JUnit.ObetenerUsuario" />
+      <item itemvalue="JUnit.CrearUsuario" />
+      <item itemvalue="JUnit.ListUsuario" />
+      <item itemvalue="JUnit.ObtenerPost" />
+      <item itemvalue="JUnit.CrearPost" />
+    </list>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c79c6dfb-04d7-4ac1-9705-33f7acbabb9c" name="Changes" comment="" />
+      <created>1678974738857</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678974738857</updated>
+      <workItem from="1678974741424" duration="7927000" />
+      <workItem from="1678984514625" duration="1976000" />
+      <workItem from="1678988313770" duration="18000" />
+      <workItem from="1678992101408" duration="33294000" />
+      <workItem from="1679056810677" duration="3207000" />
+    </task>
+    <task id="LOCAL-00001" summary="Creando estructura del proyecto">
+      <created>1678978556933</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1678978556933</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Estructura actualizada">
+      <created>1678994423004</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1678994423004</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Servicio Listar usuarios agregado">
+      <created>1678996807338</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1678996807338</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Servicio de crear usuario agregado">
+      <created>1679002149789</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1679002149789</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Creando estructura del proyecto" />
+    <MESSAGE value="Estructura actualizada" />
+    <MESSAGE value="Servicio Listar usuarios agregado" />
+    <MESSAGE value="Servicio de crear usuario agregado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Servicio de crear usuario agregado" />
+  </component>
+</project>
